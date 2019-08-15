@@ -1,0 +1,61 @@
+{% extends "/ck2_template.html" %}
+{% block head %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type=text/javascript>
+    $(function() {
+      $('a#process_input').bind('click', function() {
+      $.getJSON('/background_process', {
+        proglang: $('input[name="proglang"]').val(),
+      }, function(data) {
+        $("#result").text(data.result);
+      });
+      return false;
+      });
+    });
+  </script>
+{% endblock head %}
+{% block content %}
+<p style="float:right; font-size:.7em"><a href="{{ url_for('start_guide') }}">Start the playing guide >></a></p>
+<br>
+<h2>Buying Crusader Kings II</h2>
+<br>
+<p>Crusader kings II has been out for {% print(year-2012) %}, and in those years
+  many DLCs have come out. Some better than others. If you were to buy the game
+  and all its DLC you would be spending over $300. Thankfully, like many of
+  Paradox Interactive games, Crusader Kings II goes on sale often. There should
+  be a button below that should tell you if there are any current sales.
+</p>
+<p>Sales checker below: </p>
+{{ table }}
+<input type="text" name="proglang" value="yes">
+<p style="text-align:center;"><a href=# id=process_input><button type="button" name="button">Click to check for sales!</button></a></p>
+<p id="result"></p>
+<br>
+<p>The DLC I believe are essential for Crusader Kings II are:
+  <ul>
+    <li><a href="https://store.steampowered.com/app/210908/Expansion__Crusader_Kings_II_The_Old_Gods/?curator_clanid=3952814" target="_blank">The Old Gods</a></li>
+    <li><a href="https://store.steampowered.com/app/449980/Expansion__Crusader_Kings_II_The_Reapers_Due/?curator_clanid=3952814" target="_blank">The Reapers Due</a></li>
+    <li><a href="https://store.steampowered.com/app/329010/Expansion__Crusader_Kings_II_Way_of_Life/?curator_clanid=3952814" target="_blank">Way of life</a></li>
+    <li><a href="https://store.steampowered.com/app/226667/Expansion__Crusader_Kings_II_Sons_of_Abraham/?curator_clanid=3952814" target="_blank">Sons of Abraham</a></li>
+  </ul>
+</p>
+<br>
+<p>There are also portrait, unit pack, and music packs DLCs. They are not
+  essential, but if you feeling you need pretty portraits and music I recommend
+  getting the ultimate packs. They are bundles that include all the music,
+  portraits, and unit packs released for Crusader Kings II. You of course have
+  the option of buying separate portrait, unit, and music packs, but the bundle
+  will save you the most money.
+  <ul>
+    <li><a href="https://store.steampowered.com/app/616210/Collection__Crusader_Kings_II_Dynasty_Shield_Pack/?curator_clanid=3952814" target="_blank">Collection – Crusader Kings II: Dynasty Shield Pack</a></li>
+    <li><a href="https://store.steampowered.com/app/616160/Collection__Crusader_Kings_II_Ultimate_Music_Pack/?curator_clanid=3952814" target="_blank">Collection – Crusader Kings II: Ultimate Music Pack</a></li>
+    <li><a href="https://store.steampowered.com/app/616180/Collection__Crusader_Kings_II_Ultimate_Unit_Pack/?curator_clanid=3952814" target="_blank">Collection – Crusader Kings II: Ultimate Unit Pack</a></li>
+    <li><a href="https://store.steampowered.com/app/616160/Collection__Crusader_Kings_II_Ultimate_Music_Pack/?curator_clanid=3952814" target="_blank">Collection – Crusader Kings II: Ultimate Portrait Pack</a></li>
+  </ul>
+</p>
+<br>
+<p>Once you have the game, along with any desired DLC, you can visit the Beginners
+  Guide to learn some of the basics of the game. Note: the guide will only show
+  you the basics of the base game (no DLC required).
+</p>
+{% endblock content %}

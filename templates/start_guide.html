@@ -1,0 +1,44 @@
+{% extends "/ck2_template.html" %}
+{% block content %}
+  <p style="float:left; font-size:.7em"><a href="{{ url_for('buyers_guide') }}">Back to Buyer's Guide</a></p>
+  <p style="float:right; font-size:.7em"><a href="{{ url_for('your_character') }}">Let's get to your character >></a></p>
+  <br>
+  <h2>Before we Start</h2>
+    <p>Crusader Kings II is a game that take place during the early and late middle ages. The starting date for the base
+        game is 1066 (867 AD if you have The Old Gods DLC, or 769 AD if you have the Charlemagne DLC) and ends around 1444.
+        As such the game uses some old vocabulary. This guide will be using that vocabulary so let’s go over it:
+    </p>
+    <ul>
+        <li>Holds/ Holdings: Refer to the land held by a character.</li>
+        <li>Vassal: The landed subject of a ruler. The player character can have vassals and can be the vassal of a Lord.</li>
+        <li>Lord: The ruler of vassals. The player character can be a Lord and have a Lord. Note: your Lord can also have a Lord.</li>
+        <li>Casus Belli: A Latin expression that literally means ‘a case of war’. It is the reason a character is going to war.
+            (More on Casus Belli can be found <a href="{{ url_for('war') }}"> here</a>.)</li>
+        <li>Demesne: The amount of land a Lord holds.</li>
+        <li>Court: The people that live and work in your castle.</li>
+    </ul>
+    <br>
+    <h3>The Feudal system</h3>
+    <p>
+        Land in Crusader Kings II is organized using the feudal system. That means there is a hierarchy that goes as
+        follows (starting from the bottom):
+    </p>
+    <ul>
+        <li>Bishoprics, cities, baronies: Are ruled by Bishops, Mayors, and Barons respectively. These are the smallest
+            land holdings. A combination of either three will make up the sub holdings of a county. If the only holds
+            any of the three listed holding, it is game over for them.</li>
+        <li>Counties: Counties are ruled by Counts/ Countess. Counts rule over Bishoprics, cities, and baronies and
+            other counties. Count are the lowest title a player can hold.</li>
+        <li>Duchies: Duchies are ruled over by Dukes/ Duchess. Dukes rule over a group of counties. </li>
+        <li>Kingdoms: are ruled by Kings and Queens. They rule over Dukes and Counts.</li>
+        <li>Empire: are ruled by Emperors/ Empresses. They rule over Kings. It is the highest title a character can hold.</li>
+    </ul>
+    <br>
+    <p>Knowing the different ruler titles is important because it tells you what will happen to your land upon your
+        characters death. For example, say you are a king with two kingdom titles and you have two sons. When you die,
+        and depending on your inheritance laws, your kingdom would be split between your sons. This not only divides the
+        kingdom you worked hard to build but weakens both kingdoms and leaves them open to potential invasion by your
+        neighbors. Now if you were an Emperor the inheritance of your kingdom titles would not split your empire
+        (assuming you only hold one Emperor title). </p>
+        <p>Now on to <a href="{{ url_for('your_character') }}">your character</a></p>
+{% endblock content %}

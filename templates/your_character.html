@@ -1,0 +1,118 @@
+{% extends "/ck2_template.html" %}
+{% block content %}
+<p style="float:left; font-size:.7em"><a href="{{ url_for('start_guide') }}">let's restart</a></p>
+<p style="float:right; font-size:.7em"><a href="{{ url_for('war') }}">Let's Expand! >></a></p>
+  <br>
+    <h2>Your Character</h2>
+    <br>
+    <div id="you">
+        <img src="{{ url_for('static' , filename='images/you.jpg') }}" alt="you" class="float-left">
+        <img src="{{ url_for('static', filename='images/char_screen.jpg') }}" alt="character screen" class="float-right">
+        <p>
+          In this part of the guide we will be looking at your characters. Once
+          you are inside of your game, you will see a circle portrait in the top
+          left corner of your screen. Click on it and it will take you to your
+          character screen.
+        </p>
+        <br>
+        <p>
+          Your character screen should look similar to the image on the right.
+          As you can see it contains a ton of information. We will go through it
+          section by section. Keep in mind that the character screen is the same
+          for all charcters in the game.
+        </p>
+
+    </div>
+    <div id="char_screen">
+
+
+    </div>
+    <br>
+    <br>
+    <div id="left_side">
+      <h3>The Left Side</h3>
+      <img src="{{ url_for('static', filename='images/left_side.jpg') }}" alt="left side" id="left_char">
+      <p>
+        On the right most side of the the character screen you will see a couple
+        of icons. In order, they mean:
+        <ul>
+          <li><img src="{{ url_for('static', filename='images/ambition.png') }}" alt="ambition">
+            <b>Ambition</b>: A character's specific personal desire.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/demesne.png') }}" alt="demesne">
+            <b>Demesne</b>: The amount of lanf your character can handle.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/army_levies.jpg') }}" alt="army levies">
+            <b>Army levies</b>: The amount of troops you are able to raise.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/vassal_limit.jpg') }}" alt="vassal limit">
+            <b>Vassal Limit</b>: How many vassals you can have.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/wealth.jpg') }}" alt="wealth">
+              <b>Wealth</b>: How much money you have.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/prestige.jpg') }}" alt="prestige">
+              <b>Prestige</b>: How famous and notable you are.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/piety.jpg') }}" alt="piety">
+            <b>Piety</b>: How pious your character is.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/diplomacy.jpg') }}" alt="diplomacy">
+            <b>Diplomacy</b>: The number out side the parentheses is your personal diplomacy.
+            That determines your court's personal opinion towards you. The
+            number in the parentheses is your state diplomacy. That determines
+            the opinion pf charcters outside your court, towards you.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/martial.jpg') }}" alt="martial">
+            <b>Martial</b>: The number out side the parentheses is your personal martial.
+            It is used to determine you amry levy and effects how well you command armies.
+            The number in the parentheses is the state martial. It is used to
+            determine the rate at which the character's armies recover morale.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/stewardship.jpg') }}" alt="stewardship">
+              <b>Stewardship</b>: Your personal stewardship plus your spouse's stewardship
+              determine the your demesne limit. The state stewardship determines the income of your demesne.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/intrigue.jpg') }}" alt="intrigue">
+            <b>Intrigue</b>: The personal intrigue determines how well of a spymaster you
+            would make. The state intrigue increases plot power, makes your plot
+            harder to discover, and increases your imprisonment chances.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/learning.jpg') }}" alt="learning">
+              <b>Learning</b>: The personal learning determins the amount of technology
+              points you gain per month. The state learning gives the charcter piety.
+          </li>
+          <li><img src="{{ url_for('static', filename='images/personal_combat.jpg') }}" alt="personal combat">
+              <b>Personal Combat</b>: Determines how well your character would do in a duel.
+              Also effects commanding skills.
+          </li>
+        </ul>
+      </p>
+    </div>
+    <br>
+    <div id="mid_part">
+      <h3>The Middle Part</h3>
+      <p style="text-align:center;"><img src="{{ url_for('static', filename='images/mid_part.jpg') }}" alt="mid part"></p>
+      <p>
+        The top row shows the your traits. Traits can be earned through out the game.
+        Some traits are good, other bad. The next row show Modifiers. Like traits
+        they offer benefits and penalties, but last only for a limited time. The
+        row underneath that show the titles you own, your claims, and any truces you may have.
+      </p>
+    </div>
+    <br>
+    <div id="bottom_half">
+      <h3>The Bottom Half</h3>
+      <p>The bottom half of your character screen has tabs. The family tab lets
+        you view your family. The relationships tab lets you view your relations.
+        The vassal tab lets you view your vassals. The court tab lets you view the
+        characters in your court. The pacts tab lets you view any alliances or
+        defensive pacts you are currently in. Finally, the abroad tab lets you
+        view any family courtiers you have abroad.</p>
+        <br>
+      <img src="{{ url_for('static', filename='images/bottom_half.jpg') }}" alt="bottom screen">
+      <img src="{{ url_for('static', filename='images/bottom_relations.jpg') }}" alt="relations tab">
+      <img src="{{ url_for('static', filename='images/bottom_vassals.jpg') }}" alt="vassals">
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ck2.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% if title %}
+      <title>Crusader Kings II - {{ title }}</title>
+    {% else %}
+      <title>Document</title>
+    {% endif %}
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <a href="{{ url_for('ck2_home') }}"><img class="logo" src="../static/images/CKII_logo.png" alt="game logo"></a>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="{{ url_for('ck2_home') }}"><i class="fa fa-home nav-icon"></i>Home</a></li>
+            <li><a href="{{ url_for('buyers_guide') }}"><i class="fa fa-search-dollar nav-icon"></i>Buy</a></li>
+            <li><a href="{{ url_for('start_guide') }}"><i class="fa fa-play nav-icon"></i>Getting started</a></li>
+            <li><a href="{{ url_for('your_character') }}"><i class="fas fa-crown nav-icon"></i>Your Character</a></li>
+            <li><a href="{{ url_for('war') }}"><i class="fa fa-link nav-icon"></i>Expansion</a></li>
+            <li><a href="{{ url_for('ck2_about') }}"><i class="fas fa-info-circle nav-icon"></i>About</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="../static/JS/scripts.js"></script>
+    </header>
+    <div class="main">
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

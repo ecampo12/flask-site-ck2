@@ -1,0 +1,33 @@
+{% extends "/ck2_template.html" %}
+{% block content %}
+  <h2 style="text-align:center;">A Beginners Guide to Crusader Kings II</h2>
+  <br>
+  <!--Slide Show start-->
+  <div class="slide_show" style="max-width:100%">
+    <img class="mySlides" src="../static/images/ck2_1.png" style="width:100%">
+    <img class="mySlides" src="../static/images/ck2_2.jpg" style="width:100%">
+    <img class="mySlides" src="../static/images/ck2_3.jpg" style="width:100%">
+  </div>
+  <script src="../static/JS/slide_show.js">
+
+  </script>
+  <br>
+  <!--Slide show end-->
+      <h3>Crusader Kings II</h3>
+    <p><i>
+        "{% for x in des %}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ x }}
+        {% if x == des[-1] %}
+          "- <a href="https://store.steampowered.com/app/203770/Crusader_Kings_II/" target="_blank">Steam</a> game description
+        {% endif %}
+      <br>
+        {% endfor %}
+    </i></p>
+  <br>
+  <p>
+    In this guild we will cover some of the basics of Crusader Kings II. We will go over:
+    where and when to buy the game, setting up a game, basics of the game. If you do
+    not own the game please check the <a href="{{ url_for('buyers_guide') }}">Buyer's Guide</a> before buying
+    for reccommendations. If you are ready to start, <a href="{{ url_for('start_guide') }}">let's get started!</a>
+  </p>
+  {% endblock content %}
