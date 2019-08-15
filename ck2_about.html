@@ -1,0 +1,43 @@
+{% extends "/ck2_template.html" %}
+{% block content %}
+  <h2>About this page</h2>
+  <p>If you are seeing this page then that means everything is doing fine.</p>
+  <p>
+    This site is being hosted on my raspberry pi at home. I set it up to act as a
+    web server. The site you are viewing was created using
+    <a href="http://flask.pocoo.org/" target="_blank">Flask</a>, a python based
+    <a href="https://en.wikipedia.org/wiki/Web_framework" target="_blank">microframework</a>.
+    My server is running on <a href="https://www.ubuntu.com/download/iot/raspberry-pi-2-3" target="_blank">ubuntu server</a>, with
+    <a href="https://www.nginx.com/" target="_blank">nginx</a> and <a href="https://gunicorn.org/" target="_blank">gunicorn</a>.
+</p>
+<br>
+<p>
+  If there is not a weird domain name in your url, that means my personal domain
+  name routed you to my server correctly.
+</p>
+<br>
+<p>
+  Here are the resources I used to get this set up:
+</p>
+<ul>
+  <li><a href="https://maker.pro/raspberry-pi/projects/raspberry-pi-web-server" target="_blank">
+    How to Make a Raspberry Pi Web Server
+  </a></li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=goToXTC96Co" target="_blank">Corey Schafer's - Deploy to Linux Server</a>
+  </li>
+  <li><a href="https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">Corey Schafer's - Flask Tutorial Playlist</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">Pretty Printed's - Flask Tutorial</a></li>
+  <li><a href="https://medium.com/@petroniod/a-headless-raspberry-pi-home-server-a4b873c245a8" target="_blank"><i>A Headless Raspberry Pi Home Server</i></a>; a guide for those who choose not to connect a mouse and keyboard to their raspberry pi</li>
+  <li><a href="https://www.raspberrypi.org/documentation/remote-access/web-server/" target="_blank">Setting up a web server on a Raspberry Pi</a></li>
+  <li><a href="https://maker.pro/raspberry-pi/projects/raspberry-pi-web-server" target="_blank">Access your files from anywhere in the world with this web server made with a Raspberry Pi.</a></li>
+</ul><br>
+<p>If you want you can get your own raspberry pi starter kit
+  <a href="https://www.amazon.com/CanaKit-Raspberry-Starter-Premium-Black/dp/B07BCC8PK7/ref=sr_1_1_sspa?keywords=raspberry+pi+canakit&qid=1557731659&s=gateway&sr=8-1-spons&psc=1&smid=A30ZYR2W3VAJ0A" target="_blank">here</a>.</p>
+  
+  <h3>**UPDATE**</h3>
+  <p>As of July 2019, this flask site will no longer be hosted on my home raspberry pi webserver. I switched IPS, and they use <a href="https://en.wikipedia.org/wiki/Carrier-grade_NAT">Carrier Grade NAT</a>. 
+  This means I will not be able to just forward some ports to make my server accessible. I am aware of some of the methods to get around a CG NAT, 
+  but I have not found one that I like. </p>
+  <p>For now, this flask app will be hosted on Heroku.</p>
+{% endblock content %}
