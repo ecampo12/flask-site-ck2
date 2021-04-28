@@ -7,4 +7,4 @@ Once everything is installed, run 'python run.py' or 'python3 run.py' to start t
 
 navigate to 'localhost:5000' in a web browser to view the site.
 
-feel free to change and play arounf with it as you please!
+feel free to change and play around with it as you please!
