@@ -4,7 +4,7 @@ chardet==3.0.4
 Click==7.0
 configparser==3.7.4
 Flask==1.0.2
-future==0.17.1
+future==0.18.3
 gunicorn==19.9.0
 idna==2.8
 itsdangerous==1.1.0
