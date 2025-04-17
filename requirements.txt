@@ -13,6 +13,6 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 requests==2.21.0
 soupsieve==1.7.2
-urllib3==1.26.5
+urllib3==1.26.19
 virtualenv==16.5.0
 Werkzeug==3.0.6
